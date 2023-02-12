@@ -16,7 +16,6 @@ class Blog(BaseModel):
    user=models.ForeignKey(User, on_delete=models.CASCADE, related_name="blogs")
    title = models.CharField(max_length=500)
    blog_text = models.TextField()
-   main_image = models.ImageField(upload_to="crud_media")
 
    def __str__(self):
       return self.title
